@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../Assets/tic-tac-toe.png">
+    <link rel="stylesheet" href="../Assets/style.css">
+    <script src="../Scripts/Index.js" defer></script>
+    <title>Jogo da Velha</title>
+</head>
+
+<body>
+
+    <div class="dialog" id="startDialog">
+        <div class="content">
+            <form method="post" id="form" class="column">
+                <label class="header">Jogador O</label>
+                <input id="playerX" type="text">
+                <label class="header">Jogador x</label>
+                <input id="playerO" type="text">
+                <input type="button" onClick="startGame()" value="Start">
+            </form>
+            <p class="header-2" id="invalidInputMessage"></p>
+        </div>
+    </div>
+
+    <div class="dialog" id="winningDialog">
+        <div class="content column">
+            <p class="row header" id="message"></p>
+            <input type="button" onClick="reStartGame()" value="Restart">
+        </div>
+    </div>
+
+    <main>
+        <p class="row header center" id="name"></p>
+        <div class="board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+    </main>
+
+</body>
+
+</html>
